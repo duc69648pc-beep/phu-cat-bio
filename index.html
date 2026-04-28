@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nông Nghiệp Số Phù Cát - Góc nhìn Sinh học 12A6. Triển lãm số kết nối di truyền học với nông nghiệp địa phương Bình Định." />
+  <title>Nông Nghiệp Số Phù Cát · Sinh học 12A6</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ====== Decorative grain overlay ====== -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ====== Navigation ====== -->
+  <nav class="nav">
+    <a href="#trang-chu" class="nav__brand">
+      <span class="nav__brand-mark">PC</span>
+      <span class="nav__brand-text">Phù Cát<span class="nav__brand-sub">12A6</span></span>
+    </a>
+    <ul class="nav__menu">
+      <li><a href="#trang-chu">01 · Trang chủ</a></li>
+      <li><a href="#dong-mau">02 · Dòng máu quý tộc</a></li>
+      <li><a href="#mai-vang">03 · Vàng xanh</a></li>
+      <li><a href="#hoc-tro">04 · Góc học trò</a></li>
+      <li><a href="#lien-he">05 · Liên hệ</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ====== TRANG 1: HERO ====== -->
+  <header id="trang-chu" class="hero">
+    <div class="hero__meta">
+      <span class="hero__tag">Triển lãm số · Sinh học 12</span>
+      <span class="hero__date">Lớp 12A6 · Phù Cát · Bình Định</span>
+    </div>
+
+    <h1 class="hero__title">
+      <span class="hero__line">Phù Cát —</span>
+      <span class="hero__line hero__line--italic">nơi tri thức sinh học</span>
+      <span class="hero__line">nở hoa trên đồng ruộng.</span>
+    </h1>
+
+    <p class="hero__lede">
+      Chào mừng bạn đến với không gian triển lãm số của tập thể lớp 12A6.
+      Tại đây, chúng tôi kết nối những lý thuyết về <em>di truyền</em> và
+      <em>lai hữu tính</em> từ sách giáo khoa với những thành tựu thực tế
+      ngay tại quê hương Phù Cát.
+    </p>
+
+    <div class="hero__goals">
+      <h2 class="hero__goals-title">Ba mục tiêu của dự án</h2>
+      <ol class="hero__goals-list">
+        <li>
+          <span class="hero__goal-num">01</span>
+          <span class="hero__goal-text">
+            Khám phá thế giới giống cây trồng, vật nuôi địa phương.
+          </span>
+        </li>
+        <li>
+          <span class="hero__goal-num">02</span>
+          <span class="hero__goal-text">
+            Minh chứng sức mạnh của phương pháp <strong>lai hữu tính</strong>
+            trong việc tạo <strong>ưu thế lai</strong>.
+          </span>
+        </li>
+        <li>
+          <span class="hero__goal-num">03</span>
+          <span class="hero__goal-text">
+            Định hướng nghề nghiệp y sinh và nông nghiệp công nghệ cao.
+          </span>
+        </li>
+      </ol>
+    </div>
+
+    <a href="#dong-mau" class="hero__scroll">
+      <span>Khám phá triển lãm</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+
+    <!-- Decorative leaf SVG -->
+    <svg class="hero__leaf" viewBox="0 0 200 320" aria-hidden="true">
+      <path d="M100 10 C 40 80, 30 200, 100 310 C 170 200, 160 80, 100 10 Z" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M100 10 L 100 310" fill="none" stroke="currentColor" stroke-width="0.6"/>
+      <path d="M100 60 L 60 90 M100 90 L 50 130 M100 120 L 45 165 M100 150 L 50 195 M100 180 L 60 220 M100 210 L 70 240" stroke="currentColor" stroke-width="0.5" fill="none"/>
+      <path d="M100 60 L 140 90 M100 90 L 150 130 M100 120 L 155 165 M100 150 L 150 195 M100 180 L 140 220 M100 210 L 130 240" stroke="currentColor" stroke-width="0.5" fill="none"/>
+    </svg>
+  </header>
+
+  <!-- ====== TRANG 2: DÒNG MÁU QUÝ TỘC ====== -->
+  <section id="dong-mau" class="section section--dark">
+    <div class="section__head">
+      <span class="section__num">Trang 02</span>
+      <h2 class="section__title">
+        Công thức <em>"3 dòng máu"</em>
+        <span>— đỉnh cao lai hữu tính</span>
+      </h2>
+      <p class="section__intro">
+        Để tạo ra những chú heo có năng suất vượt trội tại các trang trại
+        Cát Trinh, người nông dân đã vận dụng công thức lai kinh điển giữa
+        ba giống heo ngoại nhập.
+      </p>
+    </div>
+
+    <p class="section__hint">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 8v4M12 16h.01" stroke-linecap="round"/>
+      </svg>
+      Rê chuột lên từng giống heo để xem đặc điểm di truyền
+    </p>
+
+    <div class="breeds">
+      <!-- Landrace -->
+      <article class="breed" data-breed="landrace">
+        <div class="breed__badge">♀ Mẹ</div>
+        <div class="breed__visual">
+          <svg viewBox="0 0 200 160" class="breed__art" aria-hidden="true">
+            <ellipse cx="100" cy="100" rx="70" ry="38" fill="#f5e6d3" stroke="#3d2817" stroke-width="1.2"/>
+            <ellipse cx="160" cy="92" rx="22" ry="20" fill="#f5e6d3" stroke="#3d2817" stroke-width="1.2"/>
+            <path d="M148 78 Q 152 68 158 76" fill="none" stroke="#3d2817" stroke-width="1"/>
+            <path d="M168 78 Q 172 68 178 76" fill="none" stroke="#3d2817" stroke-width="1"/>
+            <ellipse cx="172" cy="96" rx="6" ry="4" fill="#e8b4a0"/>
+            <circle cx="170" cy="95" r="1" fill="#3d2817"/>
+            <circle cx="174" cy="95" r="1" fill="#3d2817"/>
+            <circle cx="158" cy="88" r="1.5" fill="#3d2817"/>
+            <line x1="50" y1="135" x2="50" y2="150" stroke="#3d2817" stroke-width="2"/>
+            <line x1="75" y1="135" x2="75" y2="150" stroke="#3d2817" stroke-width="2"/>
+            <line x1="115" y1="135" x2="115" y2="150" stroke="#3d2817" stroke-width="2"/>
+            <line x1="140" y1="135" x2="140" y2="150" stroke="#3d2817" stroke-width="2"/>
+            <path d="M30 95 Q 25 88 32 85 Q 28 95 30 95" fill="#f5e6d3" stroke="#3d2817" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="breed__info">
+          <span class="breed__origin">Đan Mạch · 🇩🇰</span>
+          <h3 class="breed__name">Landrace</h3>
+          <p class="breed__role">Chuyên gia sinh sản & nuôi con</p>
+        </div>
+        <div class="breed__detail">
+          <h4>Đặc điểm di truyền</h4>
+          <ul>
+            <li>Số con/lứa cao: <strong>10–14 con</strong></li>
+            <li>Tiết sữa dồi dào, nuôi con khéo</li>
+            <li>Thân dài, 16–17 đôi xương sườn</li>
+            <li>Tai to, rủ che mặt — đặc trưng nhận dạng</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Yorkshire -->
+      <article class="breed" data-breed="yorkshire">
+        <div class="breed__badge">♂ Bố</div>
+        <div class="breed__visual">
+          <svg viewBox="0 0 200 160" class="breed__art" aria-hidden="true">
+            <ellipse cx="100" cy="100" rx="72" ry="40" fill="#fff8ec" stroke="#3d2817" stroke-width="1.2"/>
+            <ellipse cx="162" cy="90" rx="22" ry="20" fill="#fff8ec" stroke="#3d2817" stroke-width="1.2"/>
+            <path d="M150 72 L 154 62 L 158 72 Z" fill="#fff8ec" stroke="#3d2817" stroke-width="1"/>
+            <path d="M168 72 L 172 62 L 176 72 Z" fill="#fff8ec" stroke="#3d2817" stroke-width="1"/>
+            <ellipse cx="174" cy="94" rx="6" ry="4" fill="#e8b4a0"/>
+            <circle cx="172" cy="93" r="1" fill="#3d2817"/>
+            <circle cx="176" cy="93" r="1" fill="#3d2817"/>
+            <circle cx="158" cy="86" r="1.5" fill="#3d2817"/>
+            <line x1="50" y1="138" x2="50" y2="152" stroke="#3d2817" stroke-width="2"/>
+            <line x1="78" y1="138" x2="78" y2="152" stroke="#3d2817" stroke-width="2"/>
+            <line x1="118" y1="138" x2="118" y2="152" stroke="#3d2817" stroke-width="2"/>
+            <line x1="142" y1="138" x2="142" y2="152" stroke="#3d2817" stroke-width="2"/>
+            <path d="M30 92 Q 22 82 30 80 Q 26 92 30 92" fill="#fff8ec" stroke="#3d2817" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="breed__info">
+          <span class="breed__origin">Anh Quốc · 🇬🇧</span>
+          <h3 class="breed__name">Yorkshire</h3>
+          <p class="breed__role">Tốc độ tăng trưởng siêu nhanh</p>
+        </div>
+        <div class="breed__detail">
+          <h4>Đặc điểm di truyền</h4>
+          <ul>
+            <li>Tăng trọng <strong>800–900g/ngày</strong></li>
+            <li>Đạt 100kg sau 5–6 tháng nuôi</li>
+            <li>Tai dựng, lông trắng tuyền</li>
+            <li>Khả năng thích nghi cao với khí hậu</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Duroc -->
+      <article class="breed" data-breed="duroc">
+        <div class="breed__badge">♂ Đực cuối</div>
+        <div class="breed__visual">
+          <svg viewBox="0 0 200 160" class="breed__art" aria-hidden="true">
+            <ellipse cx="100" cy="100" rx="72" ry="40" fill="#a0522d" stroke="#3d2817" stroke-width="1.2"/>
+            <ellipse cx="162" cy="92" rx="22" ry="20" fill="#a0522d" stroke="#3d2817" stroke-width="1.2"/>
+            <path d="M148 76 L 154 66 L 156 76 Z" fill="#8b4513" stroke="#3d2817" stroke-width="1"/>
+            <path d="M170 76 L 172 66 L 178 76 Z" fill="#8b4513" stroke="#3d2817" stroke-width="1"/>
+            <ellipse cx="174" cy="96" rx="6" ry="4" fill="#5d2f0a"/>
+            <circle cx="172" cy="95" r="1" fill="#000"/>
+            <circle cx="176" cy="95" r="1" fill="#000"/>
+            <circle cx="158" cy="88" r="1.5" fill="#000"/>
+            <line x1="50" y1="138" x2="50" y2="152" stroke="#3d2817" stroke-width="2"/>
+            <line x1="78" y1="138" x2="78" y2="152" stroke="#3d2817" stroke-width="2"/>
+            <line x1="118" y1="138" x2="118" y2="152" stroke="#3d2817" stroke-width="2"/>
+            <line x1="142" y1="138" x2="142" y2="152" stroke="#3d2817" stroke-width="2"/>
+            <path d="M30 96 Q 22 88 28 84 Q 24 96 30 96" fill="#8b4513" stroke="#3d2817" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="breed__info">
+          <span class="breed__origin">Hoa Kỳ · 🇺🇸</span>
+          <h3 class="breed__name">Duroc</h3>
+          <p class="breed__role">Thịt nạc thượng hạng & sức đề kháng</p>
+        </div>
+        <div class="breed__detail">
+          <h4>Đặc điểm di truyền</h4>
+          <ul>
+            <li>Tỷ lệ nạc <strong>58–62%</strong></li>
+            <li>Thịt vân mỡ đẹp (marbling)</li>
+            <li>Lông màu nâu đỏ đặc trưng</li>
+            <li>Sức đề kháng bệnh vượt trội</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- Result block -->
+    <div class="result">
+      <div class="result__formula">
+        <span class="result__chip">Landrace ♀</span>
+        <span class="result__op">×</span>
+        <span class="result__chip">Yorkshire ♂</span>
+        <span class="result__op">→ F1 ×</span>
+        <span class="result__chip">Duroc ♂</span>
+        <span class="result__op">=</span>
+      </div>
+
+      <div class="result__output">
+        <h3>Heo lai 3 dòng máu</h3>
+        <div class="result__traits">
+          <span>Đẻ sai</span>
+          <span>·</span>
+          <span>Lớn nhanh</span>
+          <span>·</span>
+          <span>Thịt ngon</span>
+        </div>
+        <p class="result__caption">
+          Đây chính là minh chứng sống động nhất cho <strong>Ưu thế lai</strong> —
+          khi con lai vượt trội cả bố lẫn mẹ về các đặc tính kinh tế.
+        </p>
+      </div>
+    </div>
+
+    <!-- Video block -->
+    <div class="video">
+      <div class="video__head">
+        <span class="video__label">▶ Bản tin Tổ 2</span>
+        <h3 class="video__title">Tìm hiểu thành tựu chọn tạo giống lợn ở địa phương</h3>
+      </div>
+      <div class="video__frame">
+        <video
+          controls
+          preload="metadata"
+          playsinline
+          poster=""
+          width="100%">
+          <source src="bantin-trang-trai-heo.mp4" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ phát video HTML5.
+          <a href="bantin-trang-trai-heo.mp4">Tải video về máy</a>.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TRANG 3: MAI VÀNG ====== -->
+  <section id="mai-vang" class="section section--gold">
+    <div class="section__head section__head--center">
+      <span class="section__num">Trang 03</span>
+      <h2 class="section__title">
+        Mai vàng Bình Định
+        <span><em>— nghệ thuật chọn giống từ hạt</em></span>
+      </h2>
+      <p class="section__intro">
+        Khác với các vùng khác thường ghép cành, người trồng mai Phù Cát ưu
+        tiên phương pháp <strong>gieo hạt (lai hữu tính)</strong> để tạo ra
+        những gốc mai có bộ đế vững chãi và sức sống bền bỉ qua hàng chục năm.
+      </p>
+    </div>
+
+    <!-- Decorative blooms -->
+    <div class="mai-decor" aria-hidden="true">
+      <svg viewBox="0 0 100 100" class="bloom bloom--1">
+        <g fill="#f4a261" stroke="#7c4a03" stroke-width="0.6">
+          <ellipse cx="50" cy="25" rx="9" ry="14"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(60 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(120 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(180 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(240 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(300 50 50)"/>
+          <circle cx="50" cy="50" r="5" fill="#7c4a03"/>
+        </g>
+      </svg>
+      <svg viewBox="0 0 100 100" class="bloom bloom--2">
+        <g fill="#e9c46a" stroke="#7c4a03" stroke-width="0.6">
+          <ellipse cx="50" cy="25" rx="9" ry="14"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(60 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(120 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(180 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(240 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(300 50 50)"/>
+          <circle cx="50" cy="50" r="5" fill="#7c4a03"/>
+        </g>
+      </svg>
+      <svg viewBox="0 0 100 100" class="bloom bloom--3">
+        <g fill="#f4a261" stroke="#7c4a03" stroke-width="0.6">
+          <ellipse cx="50" cy="25" rx="9" ry="14"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(72 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(144 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(216 50 50)"/>
+          <ellipse cx="50" cy="25" rx="9" ry="14" transform="rotate(288 50 50)"/>
+          <circle cx="50" cy="50" r="5" fill="#7c4a03"/>
+        </g>
+      </svg>
+    </div>
+
+    <ol class="process">
+      <li class="process__step">
+        <span class="process__num">i.</span>
+        <h4>Chọn cây mẹ</h4>
+        <p>Cây mẹ phải có hoa đẹp, từ <strong>9 đến 36 cánh</strong>, màu vàng tươi rực rỡ và bộ đế vững.</p>
+      </li>
+      <li class="process__step">
+        <span class="process__num">ii.</span>
+        <h4>Thụ phấn</h4>
+        <p>Để hoa thụ phấn tự nhiên hoặc thụ phấn chéo có chọn lọc giữa các cây mẹ ưu tú.</p>
+      </li>
+      <li class="process__step">
+        <span class="process__num">iii.</span>
+        <h4>Thu hoạch hạt</h4>
+        <p>Hạt mai chín già được thu vào tháng 5–6, phơi mát rồi gieo ngay khi đất còn ẩm.</p>
+      </li>
+      <li class="process__step">
+        <span class="process__num">iv.</span>
+        <h4>Tạo cây con</h4>
+        <p>Sau 3–5 năm, chọn lọc những cây có dáng đẹp, gốc bự để dưỡng thành tác phẩm hoàn chỉnh.</p>
+      </li>
+    </ol>
+
+    <blockquote class="quote">
+      <p>
+        Mỗi gốc mai không chỉ là một tác phẩm nghệ thuật mà còn là nguồn
+        <em>"vàng xanh"</em> giúp người dân thoát nghèo, vươn lên làm giàu
+        trên chính mảnh đất quê hương.
+      </p>
+      <footer>— Người trồng mai Phù Cát</footer>
+    </blockquote>
+  </section>
+
+  <!-- ====== TRANG 4: GÓC HỌC TRÒ ====== -->
+  <section id="hoc-tro" class="section section--cream">
+    <div class="section__head">
+      <span class="section__num">Trang 04</span>
+      <h2 class="section__title">
+        Tạp chí khoa học trẻ
+        <span>— 12A6 · H6K55</span>
+      </h2>
+      <p class="section__intro">
+        Nơi lưu giữ các bài báo, poster và bản tin khuyến nông do chính
+        tay các bạn học sinh lớp <strong>H6K55</strong> biên soạn.
+      </p>
+    </div>
+
+    <div class="masthead">
+      <div class="masthead__line"></div>
+      <span class="masthead__text">Đồng biên soạn</span>
+      <div class="masthead__line"></div>
+    </div>
+
+    <ul class="authors">
+      <li class="author"><span class="author__num">01</span><span class="author__name">Hà Minh Hiếu</span></li>
+      <li class="author"><span class="author__num">02</span><span class="author__name">Cáp Minh Triết</span></li>
+      <li class="author"><span class="author__num">03</span><span class="author__name">Hà Trần Thanh Thảo</span></li>
+      <li class="author"><span class="author__num">04</span><span class="author__name">Nguyễn Trường Thọ</span></li>
+      <li class="author"><span class="author__num">05</span><span class="author__name">Nguyễn Quốc Duy</span></li>
+      <li class="author"><span class="author__num">06</span><span class="author__name">Dương Tuấn Sĩ</span></li>
+      <li class="author"><span class="author__num">07</span><span class="author__name">Phan Hữu Tài</span></li>
+      <li class="author"><span class="author__num">08</span><span class="author__name">Trần Nguyễn Đắc Hải</span></li>
+      <li class="author"><span class="author__num">09</span><span class="author__name">Đặng Hữu Hào</span></li>
+    </ul>
+  </section>
+
+  <!-- ====== TRANG 6: LIÊN HỆ ====== -->
+  <section id="lien-he" class="section section--contact">
+    <div class="contact">
+      <span class="section__num section__num--light">Trang 05</span>
+      <h2 class="contact__title">
+        Bạn muốn tìm hiểu thêm
+        <em>về giống Phù Cát?</em>
+      </h2>
+      <p class="contact__text">
+        Mọi thắc mắc về kỹ thuật lai tạo giống địa phương, hãy liên hệ
+        với đội ngũ chuyên gia nhí 12A6 hoặc giáo viên hướng dẫn.
+      </p>
+
+      <a href="mailto:lamda388@gmail.com" class="contact__mail">
+        <span class="contact__mail-label">Gửi thư cho chúng tôi</span>
+        <span class="contact__mail-addr">lamda388@gmail.com</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <div class="contact__qr">
+        <div class="contact__qr-frame">
+          <!-- QR Code placeholder - replaced via JS using API -->
+          <img id="qrCode" alt="QR Code dẫn đến trang web" />
+        </div>
+        <div class="contact__qr-text">
+          <h4>Quét mã để chia sẻ</h4>
+          <p>Quét mã QR bên cạnh để mở nhanh trang triển lãm trên điện thoại — tiện lợi để dán vào báo cáo Sáng kiến kinh nghiệm.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__col">
+        <span class="footer__label">© 2026 · Lớp 12A6</span>
+        <span class="footer__sub">Trường THPT Phù Cát · Bình Định</span>
+      </div>
+      <div class="footer__col footer__col--right">
+        <span class="footer__label">Sinh học 12 — Chương Di truyền học</span>
+        <span class="footer__sub">Một dự án giáo dục số</span>
+      </div>
+    </footer>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
