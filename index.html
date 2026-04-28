@@ -118,51 +118,77 @@
           </figcaption>
         </figure>
 
-        <!-- Breakdown of breeds -->
-        <div class="breeds-info">
-          <article class="breed-card breed-card--landrace">
-            <header>
-              <span class="breed-card__role">♀ Mẹ</span>
+        <!-- Breakdown of breeds with hover photos -->
+        <div class="section__hint-bar">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 8v4M12 16h.01" stroke-linecap="round"/>
+          </svg>
+          Rê chuột vào ảnh từng giống heo để xem đặc điểm di truyền
+        </div>
+
+        <div class="pigs">
+          <article class="pig" data-breed="landrace">
+            <div class="pig__photo">
+              <img src="img/heo-landrace.jpg" alt="Heo Landrace - Đan Mạch" loading="lazy" />
+              <span class="pig__role">♀ Mẹ</span>
+            </div>
+            <div class="pig__name">
               <h3>Landrace</h3>
-              <span class="breed-card__origin">Đan Mạch · 🇩🇰</span>
-            </header>
-            <p class="breed-card__motto">Chuyên gia sinh sản & nuôi con</p>
-            <ul>
-              <li>Số con/lứa cao: <strong>10–14 con</strong></li>
-              <li>Tiết sữa dồi dào, nuôi con khéo</li>
-              <li>Thân dài, 16–17 đôi xương sườn</li>
-              <li>Tai to, rủ che mặt</li>
-            </ul>
+              <span class="pig__origin">Đan Mạch · 🇩🇰</span>
+            </div>
+            <div class="pig__overlay">
+              <h4>Đặc điểm di truyền</h4>
+              <p class="pig__motto">Chuyên gia sinh sản & nuôi con</p>
+              <ul>
+                <li>Số con/lứa cao: <strong>10–14 con</strong></li>
+                <li>Tiết sữa dồi dào, nuôi con khéo</li>
+                <li>Thân dài, 16–17 đôi xương sườn</li>
+                <li>Tai to, rủ che mặt — đặc trưng</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="breed-card breed-card--yorkshire">
-            <header>
-              <span class="breed-card__role">♂ Bố</span>
+          <article class="pig" data-breed="yorkshire">
+            <div class="pig__photo">
+              <img src="img/heo-yorkshire.jpg" alt="Heo Yorkshire - Anh Quốc" loading="lazy" />
+              <span class="pig__role">♂ Bố</span>
+            </div>
+            <div class="pig__name">
               <h3>Yorkshire</h3>
-              <span class="breed-card__origin">Anh Quốc · 🇬🇧</span>
-            </header>
-            <p class="breed-card__motto">Tốc độ tăng trưởng siêu nhanh</p>
-            <ul>
-              <li>Tăng trọng <strong>800–900g/ngày</strong></li>
-              <li>Đạt 100kg sau 5–6 tháng</li>
-              <li>Tai dựng, lông trắng tuyền</li>
-              <li>Thích nghi tốt với khí hậu</li>
-            </ul>
+              <span class="pig__origin">Anh Quốc · 🇬🇧</span>
+            </div>
+            <div class="pig__overlay">
+              <h4>Đặc điểm di truyền</h4>
+              <p class="pig__motto">Tốc độ tăng trưởng siêu nhanh</p>
+              <ul>
+                <li>Tăng trọng <strong>800–900g/ngày</strong></li>
+                <li>Đạt 100kg sau 5–6 tháng nuôi</li>
+                <li>Tai dựng đứng, lông trắng tuyền</li>
+                <li>Thích nghi tốt với khí hậu</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="breed-card breed-card--duroc">
-            <header>
-              <span class="breed-card__role">♂ Đực cuối</span>
+          <article class="pig" data-breed="duroc">
+            <div class="pig__photo">
+              <img src="img/heo-duroc.jpg" alt="Heo Duroc - Hoa Kỳ" loading="lazy" />
+              <span class="pig__role">♂ Đực cuối</span>
+            </div>
+            <div class="pig__name">
               <h3>Duroc</h3>
-              <span class="breed-card__origin">Hoa Kỳ · 🇺🇸</span>
-            </header>
-            <p class="breed-card__motto">Thịt nạc thượng hạng</p>
-            <ul>
-              <li>Tỷ lệ nạc <strong>58–62%</strong></li>
-              <li>Thịt vân mỡ đẹp (marbling)</li>
-              <li>Lông màu nâu đỏ đặc trưng</li>
-              <li>Sức đề kháng vượt trội</li>
-            </ul>
+              <span class="pig__origin">Hoa Kỳ · 🇺🇸</span>
+            </div>
+            <div class="pig__overlay">
+              <h4>Đặc điểm di truyền</h4>
+              <p class="pig__motto">Thịt nạc thượng hạng</p>
+              <ul>
+                <li>Tỷ lệ nạc <strong>58–62%</strong></li>
+                <li>Thịt vân mỡ đẹp (marbling)</li>
+                <li>Lông màu nâu đỏ đặc trưng</li>
+                <li>Sức đề kháng vượt trội</li>
+              </ul>
+            </div>
           </article>
         </div>
 
@@ -194,11 +220,30 @@
             <h3 class="video__title">Tìm hiểu thành tựu chọn tạo giống lợn ở địa phương</h3>
           </div>
           <div class="video__frame">
+            <!--
+              Đang dùng video local (file MP4 trong repo).
+              Nếu video không phát được trên Vercel (do giới hạn LFS), hãy:
+              1. Upload video lên YouTube (Unlisted), copy ID video
+              2. Comment đoạn <video> bên dưới
+              3. Bỏ comment đoạn <iframe> phía dưới và dán ID video vào
+            -->
             <video controls preload="metadata" playsinline width="100%"
-                   poster="img/poster-bantin.jpg">
+                   poster="img/poster-bantin.jpg" crossorigin="anonymous">
+              <source src="bantin-trang-trai-heo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
               <source src="bantin-trang-trai-heo.mp4" type="video/mp4" />
-              Trình duyệt của bạn không hỗ trợ phát video.
+              <p class="video__fallback">
+                Trình duyệt của bạn không hỗ trợ phát video.
+                <a href="bantin-trang-trai-heo.mp4" download>Tải video về máy</a>
+              </p>
             </video>
+
+            <!-- Phương án dự phòng: YouTube embed (uncomment khi cần)
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_O_DAY"
+              title="Bản tin Tổ 2 - Trang trại heo Phù Cát"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+            -->
           </div>
         </div>
       </div>
@@ -287,35 +332,156 @@
           </p>
           <footer>— Người trồng mai Phù Cát</footer>
         </blockquote>
+
+        <!-- Brochures -->
+        <div class="brochures-head">
+          <span class="section__num">Brochure giới thiệu</span>
+          <h3>Mai Vàng Bình Định <em>— ấn phẩm quảng bá</em></h3>
+          <p>Hai brochure dưới đây do tổ biên soạn thiết kế để giới thiệu đặc trưng và liên hệ làng nghề mai Phù Cát. Click để xem phóng to.</p>
+        </div>
+
+        <div class="brochures">
+          <figure class="brochure" data-gallery="brochures" data-src="img/brochure-thong-tin.jpg">
+            <div class="brochure__frame">
+              <img src="img/brochure-thong-tin.jpg" alt="Brochure: Sắc Xuân Bình Định - Đặc trưng nổi bật" loading="lazy" />
+              <span class="brochure__zoom">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="7"/>
+                  <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+            <figcaption>
+              <span class="brochure__tag">01 · Đặc trưng</span>
+              <h4>Sắc Xuân Bình Định</h4>
+              <p>Giới thiệu 3 đặc trưng nổi bật của mai vàng Bình Định: Dáng Long, Mai Cúc, Mai Giảo.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="brochure" data-gallery="brochures" data-src="img/brochure-lien-he.jpg">
+            <div class="brochure__frame">
+              <img src="img/brochure-lien-he.jpg" alt="Brochure: Mai Vàng Bình Định - Liên hệ" loading="lazy" />
+              <span class="brochure__zoom">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="7"/>
+                  <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+            <figcaption>
+              <span class="brochure__tag">02 · Liên hệ</span>
+              <h4>Mai Vàng Bình Định</h4>
+              <p>Hoa xuân rực rỡ — thông tin liên hệ và website maivangbinhdinh.com để khám phá thêm.</p>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <!-- ====== PAGE 04: GÓC HỌC TRÒ — BÀI BÁO ====== -->
+    <!-- ====== PAGE 04: GÓC HỌC TRÒ — TẠP CHÍ ====== -->
     <section class="page" data-page="hoc-tro">
       <div class="section section--cream">
         <div class="section__head section__head--center">
           <span class="section__num">Trang 04</span>
           <h2 class="section__title">
-            Bài báo khoa học trẻ
-            <span><em>— sản phẩm sáng tạo của 12A6 · H6K55</em></span>
+            Khuyến Nông Bình Định
+            <span><em>— sản phẩm sáng tạo của 12A6 · Nhóm 3 · H6K55</em></span>
           </h2>
           <p class="section__intro">
-            Bài báo dưới đây do chính tay các bạn học sinh lớp <strong>H6K55</strong>
-            biên soạn, giới thiệu vẻ đẹp và những đặc trưng nổi bật của Mai Vàng Bình Định —
-            biểu tượng văn hóa của miền đất Phù Cát quê hương.
+            Tạp chí <strong>5 trang</strong> do Nhóm 3 lớp H6K55 biên soạn,
+            xoay quanh chủ đề <em>"Tìm hiểu về giống cây mai ở Phù Cát và thành tựu
+            của phương pháp chọn tạo giống hiện đại"</em>. Click vào từng trang để xem
+            chi tiết.
           </p>
         </div>
 
-        <!-- Featured paper -->
-        <figure class="paper">
-          <div class="paper__frame">
-            <img src="img/bai-bao-mai-vang.jpg" alt="Bài báo: Mai Vàng Bình Định - Sắc Xuân Bình Định" loading="lazy" />
+        <!-- Magazine masthead -->
+        <div class="magazine-meta">
+          <div class="magazine-meta__col">
+            <span class="magazine-meta__label">Đơn vị sản xuất</span>
+            <span class="magazine-meta__val">Nhóm 3 · H6K55</span>
           </div>
-          <figcaption class="paper__meta">
-            <span class="paper__tag">Tạp chí khoa học trẻ · Số 01</span>
-            <span class="paper__date">Tháng 04 · 2026</span>
-          </figcaption>
-        </figure>
+          <div class="magazine-meta__divider"></div>
+          <div class="magazine-meta__col">
+            <span class="magazine-meta__label">Phát hành</span>
+            <span class="magazine-meta__val">Số 02 · Chủ Nhật 22/12/2024</span>
+          </div>
+          <div class="magazine-meta__divider"></div>
+          <div class="magazine-meta__col">
+            <span class="magazine-meta__label">Chuyên mục</span>
+            <span class="magazine-meta__val">Sinh học 12 — Chân trời sáng tạo</span>
+          </div>
+        </div>
+
+        <!-- Featured + thumbnails magazine layout -->
+        <div class="magazine">
+          <figure class="magazine__featured" data-gallery="magazine" data-page-num="1" data-src="img/bao-trang-1.jpg">
+            <div class="magazine__featured-frame">
+              <img src="img/bao-trang-1.jpg" alt="Khuyến Nông Bình Định - Trang 1: Giữ hồn mai vàng" loading="lazy" />
+              <span class="magazine__badge">Trang 01 · Bìa</span>
+              <span class="magazine__zoom">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="7"/>
+                  <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+            <figcaption>
+              <span class="magazine__chapter">Trang 01 · Bìa chính</span>
+              <h3>Giữ hồn mai vàng — nghệ thuật tạo giống mai</h3>
+              <p>
+                Hoa mai miền Trung kiên cường giữa nắng gió — biểu tượng văn hóa
+                và niềm tự hào của vùng đất Bình Định. Trang bìa của tạp chí số 02.
+              </p>
+            </figcaption>
+          </figure>
+
+          <div class="magazine__thumbs">
+            <figure class="magazine__thumb" data-gallery="magazine" data-page-num="2" data-src="img/bao-trang-2.jpg">
+              <div class="magazine__thumb-frame">
+                <img src="img/bao-trang-2.jpg" alt="Trang 2: Đặc điểm và phương pháp" loading="lazy" />
+                <span class="magazine__thumb-num">02</span>
+              </div>
+              <figcaption>
+                <h4>Đặc điểm & phương pháp</h4>
+                <p>Kỹ thuật gieo hạt, ghép cành & lai tạo mai vàng tại Phù Cát.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="magazine__thumb" data-gallery="magazine" data-page-num="3" data-src="img/bao-trang-3.jpg">
+              <div class="magazine__thumb-frame">
+                <img src="img/bao-trang-3.jpg" alt="Trang 3: Hiệu quả kinh tế" loading="lazy" />
+                <span class="magazine__thumb-num">03</span>
+              </div>
+              <figcaption>
+                <h4>Hiệu quả kinh tế</h4>
+                <p>Mai vàng — nguồn "vàng xanh" giúp dân Phù Cát đổi đời.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="magazine__thumb" data-gallery="magazine" data-page-num="4" data-src="img/bao-trang-4.jpg">
+              <div class="magazine__thumb-frame">
+                <img src="img/bao-trang-4.jpg" alt="Trang 4: Những thách thức cần đối mặt" loading="lazy" />
+                <span class="magazine__thumb-num">04</span>
+              </div>
+              <figcaption>
+                <h4>Thách thức đối mặt</h4>
+                <p>Phỏng vấn nghệ nhân Lê Văn Tình về nghề trồng mai.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="magazine__thumb" data-gallery="magazine" data-page-num="5" data-src="img/bao-trang-5.jpg">
+              <div class="magazine__thumb-frame">
+                <img src="img/bao-trang-5.jpg" alt="Trang 5: Giải pháp và kết luận" loading="lazy" />
+                <span class="magazine__thumb-num">05</span>
+              </div>
+              <figcaption>
+                <h4>Giải pháp & kết luận</h4>
+                <p>Hướng đi bền vững và lời cảm ơn của Tổ biên tập.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
 
         <!-- Authors -->
         <div class="masthead">

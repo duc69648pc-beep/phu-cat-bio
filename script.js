@@ -257,101 +257,124 @@ const CHATBOT_CONFIG = {
     ]
   },
 
-  /* ---------- Trang 04: Bài báo / Góc học trò ---------- */
+  /* ---------- Trang 04: Tạp chí Khuyến Nông (5 trang) ---------- */
   "hoc-tro": {
     name: "Phóng viên 12A6",
     avatar: "📰",
-    status: "Tổ biên soạn · H6K55",
+    status: "Tổ biên tập · Nhóm 3 H6K55",
     greeting:
-      "Xin chào! Mình là <strong>Phóng viên 12A6</strong> — đại diện tổ biên soạn " +
-      "bài báo Mai Vàng Bình Định. Bạn muốn biết gì về sản phẩm sáng tạo của tụi mình? 📰",
+      "Xin chào! Mình là <strong>Phóng viên 12A6</strong> — đại diện Nhóm 3 lớp " +
+      "H6K55, tổ biên tập tạp chí <em>Khuyến Nông Bình Định</em> số 02. Bạn muốn " +
+      "biết gì về 5 trang báo của tụi mình? 📰",
     suggestions: [
-      "Bài báo nói về điều gì?",
+      "Tạp chí có bao nhiêu trang?",
+      "Trang 1 nói về điều gì?",
+      "Mỗi trang nói gì?",
       "Có bao nhiêu tác giả?",
-      "H6K55 là lớp nào?",
-      "3 đặc trưng nổi bật là gì?",
-      "Khi nào xuất bản?",
-      "Sao gọi 'Sắc Xuân Bình Định'?"
+      "Phát hành khi nào?",
+      "Ông Lê Văn Tình là ai?"
     ],
     topicKeywords: [
-      "bai bao", "tap chi", "khoa hoc", "tre", "tac gia", "bien soan",
-      "h6k55", "12a6", "phu cat", "binh dinh", "mai", "vang", "xuan",
-      "dang long", "mai cuc", "mai giao", "san pham", "sang tao",
-      "lop", "truong", "post"
+      "bao", "tap chi", "khuyen nong", "binh dinh", "trang",
+      "tac gia", "bien soan", "h6k55", "nhom 3", "12a6",
+      "phu cat", "mai", "vang", "le van tinh", "thach thuc",
+      "kinh te", "giai phap", "san pham", "lop", "truong",
+      "thpt", "so 2", "so 02", "chu nhat", "22 12"
     ],
     knowledge: [
       {
-        keywords: ["bai bao noi gi", "noi dung", "ve gi", "chu de gi"],
+        keywords: ["bao nhieu trang", "may trang", "tong cong"],
         answer:
-          "Bài báo có chủ đề <strong>'Sắc Xuân Bình Định — Mai Vàng Bình Định'</strong>, " +
-          "giới thiệu vẻ đẹp độc đáo và 3 đặc trưng nổi bật của mai vàng quê hương Phù Cát: " +
-          "<em>Dáng Long, Mai Cúc, Mai Giảo</em>. Đây là sản phẩm sáng tạo của tổ biên soạn 12A6! 📰"
+          "Tạp chí <strong>Khuyến Nông Bình Định</strong> số 02 có <strong>5 trang</strong>: " +
+          "Trang 1 (Bìa & dẫn đề), Trang 2 (Đặc điểm), Trang 3 (Hiệu quả kinh tế), " +
+          "Trang 4 (Thách thức), Trang 5 (Giải pháp & kết luận). 📚"
+      },
+      {
+        keywords: ["trang 1", "bia", "trang nhat", "trang dau"],
+        answer:
+          "<strong>Trang 1 — Bìa chính:</strong> giới thiệu chủ đề <em>'Tìm hiểu về " +
+          "giống cây mai ở Phù Cát và thành tựu của phương pháp chọn tạo giống hiện đại'</em> " +
+          "với bài chính <em>'Giữ hồn mai vàng — nghệ thuật tạo giống mai'</em>. " +
+          "Trang bìa cũng dẫn đề cho 4 trang nội dung tiếp theo. 🌼"
+      },
+      {
+        keywords: ["trang 2", "dac diem", "phuong phap"],
+        answer:
+          "<strong>Trang 2 — Đặc điểm và phương pháp:</strong> phân tích kỹ thuật " +
+          "<em>gieo hạt</em> và <em>ghép cành</em> tại Phù Cát. Bài viết nêu rõ thời điểm " +
+          "thu hoạch hạt (tháng 5–6), kỹ thuật chăm sóc cây con, và sự khác biệt với " +
+          "các vùng trồng mai khác. 🌱"
+      },
+      {
+        keywords: ["trang 3", "hieu qua kinh te", "kinh te"],
+        answer:
+          "<strong>Trang 3 — Hiệu quả kinh tế:</strong> phân tích vai trò của mai vàng " +
+          "trong việc <em>nâng cao thu nhập</em> cho người dân Phù Cát. Trang còn có " +
+          "thông tin về Trường THPT Số 1 Phù Cát và kế hoạch thi tốt nghiệp THPTQG 2025. 💰"
+      },
+      {
+        keywords: ["trang 4", "thach thuc", "kho khan", "le van tinh", "ong tinh"],
+        answer:
+          "<strong>Trang 4 — Những thách thức cần đối mặt:</strong> đề cập đến biến đổi " +
+          "khí hậu, lạm dụng hóa chất, biến động giá cả... Trang có <em>phỏng vấn nghệ " +
+          "nhân Lê Văn Tình</em> chia sẻ về nghề trồng mai — cần kiên nhẫn và đam mê. 👨‍🌾"
+      },
+      {
+        keywords: ["trang 5", "giai phap", "ket luan", "tong bien tap"],
+        answer:
+          "<strong>Trang 5 — Giải pháp và kết luận:</strong> đề xuất chiến lược phát " +
+          "triển bền vững cho nghề trồng mai. Cuối trang có lời cảm ơn của " +
+          "<em>Tổng biên tập: Nhóm 3 — H6K55</em> và danh sách 9 đồng biên soạn. ✨"
       },
       {
         keywords: ["bao nhieu tac gia", "may tac gia", "may nguoi", "danh sach"],
         answer:
-          "Bài báo có <strong>9 đồng biên soạn</strong>: Hà Minh Hiếu, Cáp Minh Triết, " +
-          "Hà Trần Thanh Thảo, Nguyễn Trường Thọ, Nguyễn Quốc Duy, Dương Tuấn Sĩ, " +
-          "Phan Hữu Tài, Trần Nguyễn Đắc Hải, Đặng Hữu Hào — đều là học sinh xuất sắc " +
-          "của lớp 12A6 H6K55. ✍️"
+          "Tạp chí có <strong>9 đồng biên soạn</strong> trong Nhóm 3 H6K55: Hà Minh Hiếu, " +
+          "Cáp Minh Triết, Hà Trần Thanh Thảo, Nguyễn Trường Thọ, Nguyễn Quốc Duy, " +
+          "Dương Tuấn Sĩ, Phan Hữu Tài, Trần Nguyễn Đắc Hải, Đặng Hữu Hào. ✍️"
       },
       {
-        keywords: ["h6k55", "k55", "lop nao", "lop"],
+        keywords: ["khuyen nong binh dinh", "ten tap chi", "ten bao"],
         answer:
-          "<strong>H6K55</strong> là mã lớp đặc trưng: <em>H</em> = chuyên Hóa hoặc Hệ, " +
-          "<em>6</em> = lớp số 6 (12A6), <em>K55</em> = khóa thứ 55 của trường. " +
-          "Đây là lớp 12 tài năng tham gia dự án triển lãm số này! 🎓"
+          "<strong>Khuyến Nông Bình Định</strong> là tên tạp chí do Nhóm 3 lớp H6K55 " +
+          "đặt — lấy cảm hứng từ ngành khuyến nông giúp đỡ nông dân địa phương. Đây là " +
+          "<em>số 02</em>, năm thứ 55, phát hành Chủ Nhật 22/12/2024. 📅"
       },
       {
-        keywords: ["dac trung", "3 dac trung", "ba dac trung", "noi bat"],
+        keywords: ["xuat ban", "phat hanh", "khi nao", "ngay nao", "thoi gian"],
         answer:
-          "Bài báo nêu <strong>3 đặc trưng nổi bật</strong> của Mai Vàng Bình Định:<br>" +
-          "🐲 <strong>Dáng Long</strong> — dáng cây uốn lượn như rồng bay<br>" +
-          "🌼 <strong>Mai Cúc</strong> — hoa nhiều cánh xếp lớp<br>" +
-          "🎋 <strong>Mai Giảo</strong> — 8–10 cánh chuẩn truyền thống"
+          "Tạp chí số 02 được phát hành vào <strong>Chủ Nhật, 22/12/2024</strong>, " +
+          "năm thứ 55 của tờ báo. Đây là sản phẩm sáng tạo trong môn Sinh học 12 " +
+          "thuộc chương trình Chân Trời Sáng Tạo. 🗓️"
       },
       {
-        keywords: ["sac xuan", "xuan binh dinh", "ten goi"],
+        keywords: ["h6k55", "nhom 3", "lop nao", "lop", "k55"],
         answer:
-          "<strong>'Sắc Xuân Bình Định'</strong> là tên gọi đầy chất thơ — vì mai vàng " +
-          "chính là <em>biểu tượng của mùa xuân</em> miền đất võ Bình Định. " +
-          "Mỗi dịp Tết, mai vàng nở rộ khắp các làng nghề Phù Cát, mang đến không khí " +
-          "lễ hội rực rỡ. 🌸"
+          "<strong>Nhóm 3 — H6K55</strong> là tổ biên soạn gồm 9 bạn lớp 12A6, " +
+          "Trường THPT Số 1 Phù Cát, khóa 55. <em>H</em> chỉ hệ chuyên, " +
+          "<em>6</em> là lớp 12A6, <em>K55</em> là khóa thứ 55 của trường. 🎓"
       },
       {
-        keywords: ["khi nao", "xuat ban", "thoi gian", "thang", "ngay"],
+        keywords: ["truong", "thpt", "phu cat", "noi hoc"],
         answer:
-          "Bài báo được đồng biên soạn vào <strong>tháng 4 năm 2026</strong>, " +
-          "là số đầu tiên của <em>Tạp chí Khoa học trẻ 12A6</em>. Đây là dự án mở đầu, " +
-          "sắp tới tổ biên soạn sẽ tiếp tục ra những số mới về các chủ đề khác! 🗓️"
+          "Tất cả 9 đồng biên soạn đều học tại <strong>Trường THPT Số 1 Phù Cát</strong> " +
+          "tỉnh Bình Định 🏫 — ngôi trường có truyền thống học tập và sáng tạo, được " +
+          "công nhận đạt chuẩn quốc gia mức độ 2 (theo Trang 3 của tạp chí)."
       },
       {
-        keywords: ["lam sao viet", "cach viet", "viet bai bao", "kinh nghiem"],
+        keywords: ["xem to", "doc bao", "phong to", "click"],
         answer:
-          "Để viết bài báo khoa học trẻ, các bạn 12A6 đã: " +
-          "<em>(1) khảo sát thực tế</em> tại làng nghề mai Phù Cát, " +
-          "<em>(2) phỏng vấn nghệ nhân</em>, " +
-          "<em>(3) tổng hợp & phân loại</em> 3 đặc trưng chính, " +
-          "<em>(4) thiết kế poster</em> đẹp mắt. Đây là một trải nghiệm tuyệt vời! 📝"
+          "Bạn có thể <strong>click vào bất kỳ trang báo nào</strong> để mở phóng to " +
+          "và đọc rõ nội dung. Trong cửa sổ phóng to, dùng các nút <em>← →</em> " +
+          "(hoặc phím mũi tên trên bàn phím) để chuyển giữa các trang. 🔍"
       },
       {
-        keywords: ["doc bai bao", "xem to hon", "xem ro", "phong to"],
+        keywords: ["muc dich", "y nghia", "tai sao lam"],
         answer:
-          "Bạn có thể <strong>click vào ảnh bài báo</strong> ở phía trên để xem phóng to. " +
-          "Click một lần nữa để đóng lại. 🔍"
-      },
-      {
-        keywords: ["truong", "thpt", "phu cat", "hoc"],
-        answer:
-          "Tất cả các bạn đồng biên soạn đều học tại <strong>Trường THPT Phù Cát</strong>, " +
-          "tỉnh <em>Bình Định</em> — ngôi trường có truyền thống học tập và sáng tạo. 🏫"
-      },
-      {
-        keywords: ["san pham sang tao", "tai sao lam", "muc dich", "y nghia"],
-        answer:
-          "Bài báo là <strong>sản phẩm sáng tạo</strong> kết nối kiến thức Sinh học 12 " +
-          "(di truyền học, lai hữu tính) với <em>văn hóa địa phương</em> (mai vàng Bình Định). " +
-          "Mục đích: vừa học, vừa quảng bá quê hương, vừa rèn kỹ năng nghiên cứu! ✨"
+          "Mục đích của tạp chí: <strong>(1)</strong> ứng dụng kiến thức Sinh học 12 " +
+          "(di truyền, lai hữu tính) vào thực tiễn, <strong>(2)</strong> quảng bá nghề " +
+          "trồng mai vàng quê hương, <strong>(3)</strong> rèn kỹ năng nghiên cứu, " +
+          "phỏng vấn, viết báo và thiết kế. ✨"
       }
     ]
   }
@@ -676,25 +699,158 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.toggle("open");
   });
 
-  /* Paper lightbox */
-  const paperFrame = document.querySelector(".paper__frame");
-  if (paperFrame) {
-    paperFrame.addEventListener("click", () => {
-      const img = paperFrame.querySelector("img");
-      if (!img) return;
-      const lb = document.createElement("div");
-      lb.style.cssText =
-        "position:fixed;inset:0;background:rgba(3,4,94,0.92);" +
-        "display:grid;place-items:center;z-index:9999;cursor:zoom-out;" +
-        "padding:2rem;";
-      const big = document.createElement("img");
-      big.src = img.src;
-      big.style.cssText =
-        "max-width:100%;max-height:100%;border-radius:6px;" +
-        "box-shadow:0 30px 80px rgba(0,0,0,0.5);";
-      lb.appendChild(big);
-      lb.addEventListener("click", () => lb.remove());
-      document.body.appendChild(lb);
-    });
-  }
+  /* Multi-image gallery lightbox (magazine, brochures) */
+  initGalleryLightbox();
 });
+
+/* ============================================================
+   Gallery Lightbox with prev/next navigation
+   ============================================================ */
+function initGalleryLightbox() {
+  const triggers = document.querySelectorAll("[data-gallery]");
+  if (!triggers.length) return;
+
+  // Group by gallery name
+  const galleries = {};
+  triggers.forEach(el => {
+    const name = el.dataset.gallery;
+    if (!galleries[name]) galleries[name] = [];
+    galleries[name].push(el);
+  });
+
+  triggers.forEach(el => {
+    el.addEventListener("click", () => {
+      const name = el.dataset.gallery;
+      const items = galleries[name];
+      const startIdx = items.indexOf(el);
+      openLightbox(items, startIdx);
+    });
+  });
+}
+
+function openLightbox(items, startIdx) {
+  let idx = startIdx;
+
+  const lb = document.createElement("div");
+  lb.className = "lightbox";
+  lb.style.cssText =
+    "position:fixed;inset:0;background:rgba(3,4,94,0.95);" +
+    "z-index:9999;display:grid;place-items:center;padding:1rem;" +
+    "animation:lbFadeIn 0.3s ease;";
+
+  const img = document.createElement("img");
+  img.style.cssText =
+    "max-width:95vw;max-height:90vh;border-radius:6px;" +
+    "box-shadow:0 30px 80px rgba(0,0,0,0.6);" +
+    "transition:opacity 0.25s;cursor:zoom-out;";
+
+  // Counter
+  const counter = document.createElement("div");
+  counter.style.cssText =
+    "position:absolute;top:1.5rem;left:50%;transform:translateX(-50%);" +
+    "color:#fff;font-family:'DM Mono',monospace;font-size:0.85rem;" +
+    "letter-spacing:0.1em;background:rgba(0,0,0,0.4);padding:0.5rem 1rem;" +
+    "border-radius:999px;backdrop-filter:blur(8px);";
+
+  // Close button
+  const closeBtn = document.createElement("button");
+  closeBtn.innerHTML = "✕";
+  closeBtn.setAttribute("aria-label", "Đóng");
+  closeBtn.style.cssText =
+    "position:absolute;top:1.5rem;right:1.5rem;width:44px;height:44px;" +
+    "background:rgba(255,255,255,0.15);color:#fff;border:none;" +
+    "border-radius:50%;font-size:1.4rem;cursor:pointer;" +
+    "backdrop-filter:blur(8px);transition:background 0.2s;";
+  closeBtn.addEventListener("mouseenter", () => closeBtn.style.background = "rgba(255,255,255,0.3)");
+  closeBtn.addEventListener("mouseleave", () => closeBtn.style.background = "rgba(255,255,255,0.15)");
+
+  // Nav buttons
+  const navBtnStyle =
+    "position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;" +
+    "background:rgba(255,255,255,0.15);color:#fff;border:none;border-radius:50%;" +
+    "font-size:1.4rem;cursor:pointer;backdrop-filter:blur(8px);" +
+    "display:grid;place-items:center;transition:all 0.2s;";
+
+  const prevBtn = document.createElement("button");
+  prevBtn.innerHTML = "‹";
+  prevBtn.setAttribute("aria-label", "Trước");
+  prevBtn.style.cssText = navBtnStyle + "left:1.5rem;font-size:2rem;";
+
+  const nextBtn = document.createElement("button");
+  nextBtn.innerHTML = "›";
+  nextBtn.setAttribute("aria-label", "Sau");
+  nextBtn.style.cssText = navBtnStyle + "right:1.5rem;font-size:2rem;";
+
+  [prevBtn, nextBtn].forEach(b => {
+    b.addEventListener("mouseenter", () => {
+      b.style.background = "rgba(255,255,255,0.3)";
+      b.style.transform = "translateY(-50%) scale(1.08)";
+    });
+    b.addEventListener("mouseleave", () => {
+      b.style.background = "rgba(255,255,255,0.15)";
+      b.style.transform = "translateY(-50%) scale(1)";
+    });
+  });
+
+  function update() {
+    const item = items[idx];
+    img.style.opacity = "0";
+    setTimeout(() => {
+      img.src = item.dataset.src || item.querySelector("img").src;
+      img.alt = item.querySelector("img").alt;
+      counter.textContent = `${idx + 1} / ${items.length}`;
+      img.style.opacity = "1";
+    }, 150);
+    prevBtn.style.visibility = items.length > 1 ? "visible" : "hidden";
+    nextBtn.style.visibility = items.length > 1 ? "visible" : "hidden";
+  }
+
+  function close() {
+    lb.style.animation = "lbFadeOut 0.25s ease forwards";
+    setTimeout(() => {
+      lb.remove();
+      document.removeEventListener("keydown", onKey);
+    }, 250);
+  }
+
+  function onKey(e) {
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowLeft") { idx = (idx - 1 + items.length) % items.length; update(); }
+    else if (e.key === "ArrowRight") { idx = (idx + 1) % items.length; update(); }
+  }
+
+  prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    idx = (idx - 1 + items.length) % items.length;
+    update();
+  });
+  nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    idx = (idx + 1) % items.length;
+    update();
+  });
+  closeBtn.addEventListener("click", close);
+  img.addEventListener("click", close);
+  lb.addEventListener("click", (e) => {
+    if (e.target === lb) close();
+  });
+  document.addEventListener("keydown", onKey);
+
+  // Inject animations
+  if (!document.getElementById("lbAnimStyle")) {
+    const style = document.createElement("style");
+    style.id = "lbAnimStyle";
+    style.textContent =
+      "@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }" +
+      "@keyframes lbFadeOut { from { opacity: 1; } to { opacity: 0; } }";
+    document.head.appendChild(style);
+  }
+
+  lb.appendChild(img);
+  lb.appendChild(counter);
+  lb.appendChild(closeBtn);
+  lb.appendChild(prevBtn);
+  lb.appendChild(nextBtn);
+  document.body.appendChild(lb);
+  update();
+}
