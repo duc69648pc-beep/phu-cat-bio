@@ -1,118 +1,87 @@
-# 🌾 Nông Nghiệp Số Phù Cát · Sinh học 12A6
+# 🌊 Nông Nghiệp Số Phù Cát · Sinh học 12A6 · v2
 
-Website triển lãm số kết nối kiến thức Sinh học 12 (Di truyền học – Lai hữu tính) với thực tiễn nông nghiệp tại Phù Cát, Bình Định.
+Website triển lãm số nhiều trang (multi-page SPA) với tông màu xanh dương tươi mát.
 
 ## 📁 Cấu trúc thư mục
 
 ```
 phu-cat-bio/
-├── index.html                    ← Trang chính (HTML)
-├── styles.css                    ← Toàn bộ CSS
-├── script.js                     ← JavaScript (menu, hiệu ứng, QR code)
-├── bantin-trang-trai-heo.mp4     ← Video bản tin Tổ 2 (480p, ~40MB)
-├── vercel.json                   ← Cấu hình deploy Vercel
-└── README.md                     ← File hướng dẫn này
+├── index.html                    ← Trang chính (SPA 5 trang)
+├── styles.css                    ← CSS với tông xanh ocean fresh
+├── script.js                     ← Logic chuyển trang + QR
+├── bantin-trang-trai-heo.mp4     ← Video bản tin Tổ 2 (~40MB)
+├── img/
+│   ├── tap-the-12a6.jpg          ← Ảnh nền trang chủ (tập thể lớp)
+│   ├── sodo-lai-heo.jpg          ← Sơ đồ lai heo (Pig Breeding Scheme)
+│   └── bai-bao-mai-vang.jpg      ← Bài báo Mai Vàng Bình Định
+├── vercel.json
+└── README.md
 ```
 
-Toàn bộ là **website tĩnh** — không cần build, không cần Node.js, mở trực tiếp `index.html` cũng chạy được.
+## ✨ Thay đổi so với v1
 
-## 🖥️ Mở trong VS Code
+| Thay đổi | Mô tả |
+|---|---|
+| **Multi-page SPA** | Mỗi mục trong nav giờ là 1 trang riêng, click sẽ chuyển trang (không scroll) |
+| **Tông màu** | Đổi từ xanh lá rừng → **xanh dương ocean** tươi mát |
+| **Trang chủ** | Bỏ phần "3 mục tiêu của dự án" + dùng ảnh tập thể 12A6 làm nền |
+| **Trang Dòng máu quý tộc** | Thay 3 SVG heo → **sơ đồ lai thật** (Pig Breeding Scheme) |
+| **Trang Góc học trò** | Thay danh sách → **bài báo Mai Vàng** (poster) + danh sách tác giả |
+| **URL routing** | Mỗi trang có hash riêng: `#trang-chu`, `#dong-mau`, `#mai-vang`, `#hoc-tro`, `#lien-he` |
 
-1. Tải/sao chép thư mục `phu-cat-bio/` về máy.
-2. Mở VS Code → **File** → **Open Folder** → chọn thư mục `phu-cat-bio`.
-3. Cài extension **Live Server** (của Ritwick Dey) để xem trước trang web.
-4. Click chuột phải vào `index.html` → chọn **Open with Live Server**.
-5. Trang web sẽ tự động mở trong trình duyệt tại `http://localhost:5500`.
+## 🚀 Cách deploy
 
-## 🚀 Deploy lên Vercel
-
-### Cách 1 — Drag & Drop (đơn giản nhất, không cần Git)
-
-1. Truy cập [vercel.com](https://vercel.com) và đăng nhập (có thể dùng Google/GitHub).
-2. Click **Add New** → **Project**.
-3. Kéo thả nguyên thư mục `phu-cat-bio/` vào trang web.
-4. Đặt tên project (ví dụ `nong-nghiep-phu-cat`) → **Deploy**.
-5. Sau ~30 giây, Vercel sẽ cấp cho bạn URL kiểu `https://nong-nghiep-phu-cat.vercel.app`.
-
-### Cách 2 — Qua GitHub (chuyên nghiệp hơn)
+Đã có repo GitHub `duc69648pc-beep/phu-cat-bio` kết nối với Vercel.
 
 ```bash
 # Trong thư mục phu-cat-bio
-git init
 git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/USERNAME/phu-cat-bio.git
-git push -u origin main
+git commit -m "v2: multi-page SPA + ocean palette + new images"
+git push
 ```
 
-Sau đó:
-1. Vào [vercel.com](https://vercel.com) → **Add New** → **Project**.
-2. Chọn **Import Git Repository** → chọn repo vừa push.
-3. Click **Deploy**. Xong!
+Vercel sẽ tự động deploy lại trong ~1-2 phút.
 
-Mỗi lần `git push` sau này, Vercel sẽ tự động deploy lại bản mới nhất.
+## 🎨 Bảng màu
 
-### Cách 3 — Vercel CLI (cho người thích dòng lệnh)
-
-```bash
-npm i -g vercel
-cd phu-cat-bio
-vercel
-```
-
-Làm theo hướng dẫn trên màn hình → site sẽ live trong vài giây.
-
-## ✏️ Tùy chỉnh nội dung
-
-| Muốn sửa gì | Mở file | Tìm |
-|---|---|---|
-| Tiêu đề trang | `index.html` | `<title>` |
-| Lời chào trang chủ | `index.html` | `class="hero__lede"` |
-| Thông tin 3 giống heo | `index.html` | `class="breed"` |
-| Link YouTube | `index.html` | `youtube.com/embed/` |
-| Video bản tin | thay file `bantin-trang-trai-heo.mp4` | giữ nguyên tên file |
-| Các bước trồng mai | `index.html` | `class="process"` |
-| Danh sách học sinh | `index.html` | `class="authors"` |
-| Email liên hệ | `index.html` | `lamda388@gmail.com` |
-| Màu chủ đạo | `styles.css` | `:root` (đầu file) |
-
-### Ví dụ — Đổi email liên hệ
-
-Trong `index.html` tìm dòng:
-```html
-<a href="mailto:lamda388@gmail.com" class="contact__mail">
-```
-Đổi cả `mailto:lamda388@gmail.com` và phần `<span class="contact__mail-addr">lamda388@gmail.com</span>` bên dưới.
-
-### Ví dụ — Đổi màu chủ đạo
-
-Trong `styles.css`, phần `:root` ở đầu file:
 ```css
---green-800: #1b4332;   /* xanh đậm chủ đạo */
---gold-500:  #d4a017;   /* vàng mai chủ đạo */
+--blue-950: #03045e;   /* xanh navy đậm nhất */
+--blue-900: #023e8a;
+--blue-800: #0077b6;   /* màu chính */
+--blue-700: #0096c7;
+--blue-600: #00b4d8;   /* xanh sáng */
+--blue-500: #48cae4;
+--blue-400: #90e0ef;
+--blue-300: #ade8f4;
+--blue-200: #caf0f8;   /* xanh nhạt */
+--blue-100: #e8f7fb;   /* nền */
+
+--gold-500: #f9c74f;   /* vàng accent (giữ lại từ mai) */
 ```
-Đổi mã hex theo ý bạn.
 
-## 🎨 Tính năng nổi bật
+## ✏️ Tùy chỉnh
 
-- **Responsive** — chạy mượt trên cả máy tính, máy tính bảng, điện thoại.
-- **Hover trên ảnh giống heo** — hiển thị đặc điểm di truyền (theo đúng mô tả).
-- **Video YouTube nhúng** — phóng viên trang trại heo Phù Cát.
-- **QR Code tự sinh** — quét sẽ dẫn đến chính URL của trang (cập nhật tự động sau khi deploy).
-- **Hiệu ứng cuộn** — các phần xuất hiện mượt khi cuộn xuống.
-- **Menu mobile** — nút hamburger thân thiện trên điện thoại.
+| Muốn sửa | Mở file | Tìm |
+|---|---|---|
+| Đổi ảnh nền trang chủ | thay file `img/tap-the-12a6.jpg` | giữ nguyên tên |
+| Đổi sơ đồ lai heo | thay file `img/sodo-lai-heo.jpg` | giữ nguyên tên |
+| Đổi bài báo | thay file `img/bai-bao-mai-vang.jpg` | giữ nguyên tên |
+| Đổi tông màu | `styles.css` → block `:root` ở đầu file |
+| Đổi nội dung từng trang | `index.html` → tìm `data-page="..."` |
+| Đổi email | `index.html` → `lamda388@gmail.com` |
 
-## 📝 Ghi chú về QR Code
+## 🔗 Tính năng
 
-QR code được sinh tự động từ URL hiện tại của trang nhờ API miễn phí `api.qrserver.com`.
-Sau khi deploy lên Vercel, mã QR sẽ tự động trỏ đến URL Vercel của bạn — không cần làm gì thêm!
+- ✅ Multi-page navigation với hiệu ứng chuyển mượt
+- ✅ Hash URL routing (chia sẻ link đến từng trang)
+- ✅ Back/Forward trình duyệt hoạt động đúng
+- ✅ Click ảnh bài báo → mở lightbox xem to
+- ✅ Video tự pause khi chuyển trang (tiết kiệm bandwidth)
+- ✅ QR code tự sinh từ URL
+- ✅ Responsive mobile + tablet
+- ✅ Hiệu ứng Ken Burns trên ảnh nền hero
 
-## 📞 Hỗ trợ
+## 📞 Liên hệ
 
-Nếu gặp vấn đề khi deploy, hãy kiểm tra:
-1. Đã đẩy đúng thư mục chứa `index.html` (không phải thư mục cha).
-2. Tên file là `index.html` chữ thường (không phải `Index.html`).
-3. Mở Console trình duyệt (F12) xem có lỗi mạng nào không.
-
-Chúc thầy/cô và các em 12A6 có một dự án thành công rực rỡ! 🌟
+Email: lamda388@gmail.com  
+Lớp 12A6 · Trường THPT Phù Cát · Bình Định

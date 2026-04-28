@@ -1,8 +1,90 @@
 /* ============================================================
-   NÔNG NGHIỆP SỐ PHÙ CÁT — script.js
+   NÔNG NGHIỆP SỐ PHÙ CÁT — Multi-page SPA
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ----------- Page navigation logic ----------- */
+  const pages = document.querySelectorAll(".page");
+  const links = document.querySelectorAll("[data-link]");
+  const overlay = document.querySelector(".page-transition");
+  const navLinks = document.querySelectorAll(".nav__menu a");
+
+  function showPage(pageId, updateHistory = true) {
+    const target = document.querySelector(`[data-page="${pageId}"]`);
+    if (!target) return;
+
+    // Trigger transition overlay
+    overlay.classList.add("active");
+
+    setTimeout(() => {
+      // Hide all pages
+      pages.forEach(p => p.classList.remove("page--active"));
+      // Show target
+      target.classList.add("page--active");
+
+      // Update active state in nav
+      navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === `#${pageId}`) link.classList.add("active");
+        else link.classList.remove("active");
+      });
+
+      // Scroll to top instantly
+      window.scrollTo({ top: 0, behavior: "instant" });
+
+      // Update URL hash
+      if (updateHistory) {
+        history.pushState({ page: pageId }, "", `#${pageId}`);
+      }
+
+      // Hide overlay
+      setTimeout(() => overlay.classList.remove("active"), 50);
+
+      // Pause any video on inactive pages
+      document.querySelectorAll("video").forEach(v => {
+        if (!v.closest(".page--active")) v.pause();
+      });
+    }, 250);
+  }
+
+  // Handle link clicks
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        const pageId = href.substring(1);
+        showPage(pageId);
+
+        // Close mobile menu if open
+        toggle.classList.remove("open");
+        menu.classList.remove("open");
+      }
+    });
+  });
+
+  // Handle browser back/forward
+  window.addEventListener("popstate", (e) => {
+    const pageId = window.location.hash.substring(1) || "trang-chu";
+    showPage(pageId, false);
+  });
+
+  // Handle initial page from URL
+  const initialPage = window.location.hash.substring(1) || "trang-chu";
+  if (initialPage !== "trang-chu") {
+    // Show without animation on first load
+    pages.forEach(p => p.classList.remove("page--active"));
+    const target = document.querySelector(`[data-page="${initialPage}"]`);
+    if (target) {
+      target.classList.add("page--active");
+      navLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${initialPage}`);
+      });
+    } else {
+      document.querySelector('[data-page="trang-chu"]').classList.add("page--active");
+    }
+  }
 
   /* ----------- Sticky nav shrink on scroll ----------- */
   const nav = document.querySelector(".nav");
@@ -20,68 +102,32 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.classList.toggle("open");
     menu.classList.toggle("open");
   });
-  // Close on link click
-  menu.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      toggle.classList.remove("open");
-      menu.classList.remove("open");
-    });
-  });
-
-  /* ----------- Reveal on scroll ----------- */
-  const revealTargets = document.querySelectorAll(
-    ".section__head, .breed, .process__step, .author, .result, .video, .quote, .contact"
-  );
-  revealTargets.forEach(el => el.classList.add("reveal"));
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: "0px 0px -80px 0px" });
-
-  revealTargets.forEach(el => io.observe(el));
-
-  /* ----------- Stagger reveal for breed cards ----------- */
-  document.querySelectorAll(".breed").forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.12}s`;
-  });
-  document.querySelectorAll(".process__step").forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.1}s`;
-  });
-  document.querySelectorAll(".author").forEach((el, i) => {
-    el.style.transitionDelay = `${i * 0.05}s`;
-  });
 
   /* ----------- QR Code generation ----------- */
-  // Use the actual page URL (works once deployed to Vercel)
   const qrImg = document.getElementById("qrCode");
   if (qrImg) {
-    const url = window.location.href.split("#")[0]; // strip hash
-    // Free QR Server API – generates a QR PNG client-side without any key
-    const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=${encodeURIComponent(url)}`;
-    qrImg.src = qrSrc;
+    const url = window.location.href.split("#")[0];
+    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=${encodeURIComponent(url)}`;
   }
 
-  /* ----------- Active nav highlight ----------- */
-  const sections = document.querySelectorAll("section[id], header[id]");
-  const navLinks = document.querySelectorAll(".nav__menu a");
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navLinks.forEach(link => {
-          link.style.color = "";
-          if (link.getAttribute("href") === `#${id}`) {
-            link.style.color = "var(--gold-700)";
-          }
-        });
-      }
+  /* ----------- Paper image lightbox ----------- */
+  const paperFrame = document.querySelector(".paper__frame");
+  if (paperFrame) {
+    paperFrame.addEventListener("click", () => {
+      const img = paperFrame.querySelector("img");
+      if (!img) return;
+      const lb = document.createElement("div");
+      lb.style.cssText = `
+        position:fixed;inset:0;background:rgba(3,4,94,0.92);
+        display:grid;place-items:center;z-index:9999;cursor:zoom-out;
+        padding:2rem;animation:fadeIn 0.3s ease;
+      `;
+      const big = document.createElement("img");
+      big.src = img.src;
+      big.style.cssText = `max-width:100%;max-height:100%;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,0.5);`;
+      lb.appendChild(big);
+      lb.addEventListener("click", () => lb.remove());
+      document.body.appendChild(lb);
     });
-  }, { threshold: 0.4 });
-  sections.forEach(s => sectionObserver.observe(s));
+  }
 });
