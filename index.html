@@ -194,7 +194,8 @@
             <h3 class="video__title">Tìm hiểu thành tựu chọn tạo giống lợn ở địa phương</h3>
           </div>
           <div class="video__frame">
-            <video controls preload="metadata" playsinline width="100%">
+            <video controls preload="metadata" playsinline width="100%"
+                   poster="img/poster-bantin.jpg">
               <source src="bantin-trang-trai-heo.mp4" type="video/mp4" />
               Trình duyệt của bạn không hỗ trợ phát video.
             </video>
@@ -359,13 +360,18 @@
             </svg>
           </a>
 
-          <div class="contact__qr">
-            <div class="contact__qr-frame">
-              <img id="qrCode" alt="QR Code dẫn đến trang web" />
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <span class="contact__info-label">Đơn vị tổ chức</span>
+              <span class="contact__info-value">Lớp 12A6 · H6K55</span>
             </div>
-            <div class="contact__qr-text">
-              <h4>Quét mã để chia sẻ</h4>
-              <p>Quét mã QR bên cạnh để mở nhanh trang triển lãm trên điện thoại — tiện lợi để dán vào báo cáo Sáng kiến kinh nghiệm.</p>
+            <div class="contact__info-item">
+              <span class="contact__info-label">Trường</span>
+              <span class="contact__info-value">THPT Phù Cát · Bình Định</span>
+            </div>
+            <div class="contact__info-item">
+              <span class="contact__info-label">Chuyên đề</span>
+              <span class="contact__info-value">Sinh học 12 — Di truyền học</span>
             </div>
           </div>
 
@@ -384,6 +390,55 @@
     </section>
 
   </main>
+
+  <!-- ====== CHATBOT ====== -->
+  <div class="chatbot" id="chatbot" hidden>
+    <button class="chatbot__toggle" id="chatbotToggle" aria-label="Mở khung tư vấn">
+      <span class="chatbot__hint" id="chatbotHint">Tôi là trợ lý tư vấn 👋</span>
+      <span class="chatbot__bubble">
+        <span class="chatbot__avatar" id="chatbotAvatar">🐷</span>
+        <span class="chatbot__pulse"></span>
+        <span class="chatbot__badge">!</span>
+      </span>
+    </button>
+
+    <div class="chatbot__panel" id="chatbotPanel" aria-hidden="true">
+      <header class="chatbot__head">
+        <span class="chatbot__head-avatar" id="chatbotHeadAvatar">🐷</span>
+        <div class="chatbot__head-info">
+          <div class="chatbot__head-name" id="chatbotName">Bác sĩ Heo</div>
+          <div class="chatbot__head-status">
+            <span class="chatbot__dot"></span>
+            <span id="chatbotStatus">Đang online · Tư vấn miễn phí</span>
+          </div>
+        </div>
+        <button class="chatbot__close" id="chatbotClose" aria-label="Đóng">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6l12 12M6 18L18 6" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="chatbot__body" id="chatbotBody"></div>
+
+      <div class="chatbot__chips" id="chatbotChips"></div>
+
+      <form class="chatbot__form" id="chatbotForm">
+        <input
+          type="text"
+          id="chatbotInput"
+          placeholder="Nhập câu hỏi của bạn..."
+          autocomplete="off"
+          maxlength="200"
+        />
+        <button type="submit" aria-label="Gửi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
